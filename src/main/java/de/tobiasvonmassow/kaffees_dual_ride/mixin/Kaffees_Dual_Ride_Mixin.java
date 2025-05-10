@@ -38,7 +38,7 @@ public abstract class Kaffees_Dual_Ride_Mixin extends AnimalEntity {
 	public ActionResult interactMob(PlayerEntity player, Hand hand) {
 		if (this.canAddPassenger(player)) {
 			player.startRiding(this);
-			return ActionResult.success(this.getWorld().isClient);
+			return ActionResult.SUCCESS;
 		}
 		return super.interactMob(player, hand);
 	}
